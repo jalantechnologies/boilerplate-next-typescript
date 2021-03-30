@@ -1,7 +1,11 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+const config = require('config');
 
 export default function Home() {
+
+const WWW_PORT = config.get('www.port');
+console.log(WWW_PORT);
   return (
     <div className={styles.container}>
       <Head>
