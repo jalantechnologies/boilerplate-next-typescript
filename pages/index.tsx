@@ -1,12 +1,12 @@
-import SeoLayout from '../components/seo-layout/seo-layout.component';
+import { PageLayoutWithSEO } from '../components/seo-layout/page-layout-with-seo.component';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
   return (
     <div className={styles.container}>
-      <SeoLayout
+      <PageLayoutWithSEO
         title={'Create Next App'}
-        content={
+        description={
           'This is a page for creating next app for next js introduction'
         }
       />
