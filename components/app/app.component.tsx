@@ -8,4 +8,4 @@ const AppComponent = (): JSX.Element => {
   return <Home title='Hello World' />;
 };
 
-export default App;
+export default AppComponent;
