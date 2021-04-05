@@ -62,7 +62,7 @@ const InnerForm = (props: OtherProps & FormikProps<FormValues>) => {
   );
 };
 
-const Home = withFormik<MyFormProps, FormValues>({
+const HomeComponent = withFormik<MyFormProps, FormValues>({
   mapPropsToValues: (props) => ({
     email: props.initialEmail || '',
     password: props.initialPassword || '',
@@ -81,4 +81,4 @@ const Home = withFormik<MyFormProps, FormValues>({
   },
 })(InnerForm);
 
-export default Home;
+export default HomeComponent;
