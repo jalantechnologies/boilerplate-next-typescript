@@ -1,11 +1,11 @@
 import * as React from 'react';
 
-import { Home } from '@components';
+import HomeComponent from '../home/home.component';
 
 import './app.styles.css';
 
 const AppComponent = (): JSX.Element => {
-  return <Home title='Hello World' />;
+  return <HomeComponent title='Hello World' />;
 };
 
 export default AppComponent;
