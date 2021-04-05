@@ -29,35 +29,44 @@ const InnerForm = (props: OtherProps & FormikProps<FormValues>) => {
   } = props;
 
   return (
-    <Form>
+    <Form onSubmit={handleSubmit}>
       <h3>{text}</h3>
-      <Field
-        type='email'
-        name='email'
-        onChange={handleChange}
-        onBlur={handleBlur}
-        value={values.email}
-      />
-      {touched.email && errors.email && <div>{errors.email}</div>}
+      <div>
+        <label>Email</label>
+        <Field
+          type='email'
+          name='email'
+          onChange={handleChange}
+          onBlur={handleBlur}
+          value={values.email}
+        />
+      </div>
 
-      <Field
-        type='password'
-        name='password'
-        nChange={handleChange}
-        onBlur={handleBlur}
-        value={values.password}
-      />
-      {touched.password && errors.password && <div>{errors.password}</div>}
+      <div>
+        <label>Password</label>
+        {touched.email && errors.email && <div>{errors.email}</div>}
 
-      <button
-        type='submit'
-        disabled={
-          isSubmitting ||
-          !!(errors.email && touched.email) ||
-          !!(errors.password && touched.password)
-        }>
-        Sign In
-      </button>
+        <Field
+          type='password'
+          name='password'
+          onChange={handleChange}
+          onBlur={handleBlur}
+          value={values.password}
+        />
+        {touched.password && errors.password && <div>{errors.password}</div>}
+      </div>
+
+      <div>
+        <button
+          type='submit'
+          disabled={
+            isSubmitting ||
+            !!(errors.email && touched.email) ||
+            !!(errors.password && touched.password)
+          }>
+          Sign In
+        </button>
+      </div>
     </Form>
   );
 };
