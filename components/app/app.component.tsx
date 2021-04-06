@@ -1,12 +1,19 @@
 import * as React from 'react';
+import { HomeComponent } from '@components';
+import Image from 'next/image';
 
-import HomeComponent from '../home/home.component';
+
 
 const AppComponent = (): JSX.Element => {
   return (
     <div>
-      <img className='logo' src='../../assets/logo.png' alt='' />
-      <HomeComponent text='Hello World' />
+      <Image
+        src={`${process.env.baseUrl}/assets/images/logo.png`}
+        alt='logo'
+        width={200}
+        height={200}
+      />
+      <HomeComponent text={'Hello World'} />
     </div>
   );
 };
