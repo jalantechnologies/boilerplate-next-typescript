@@ -9,7 +9,9 @@ const Input: React.FC<InputProps> = ({ name, label, ...rest }) => {
   return (
     <div className='input-wrapper'>
       <label htmlFor={name}>{label}</label>
+      <br />
       <input id={name} {...rest} />
+      <br />
     </div>
   );
 };
