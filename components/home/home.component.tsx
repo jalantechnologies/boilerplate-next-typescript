@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { withFormik, FormikProps, FormikErrors, Form, Field } from 'formik';
 import * as Yup from 'yup';
+import Input from '../input-field/input';
 
 interface FormValues {
   email: string;
@@ -32,21 +33,23 @@ const InnerForm = (props: OtherProps & FormikProps<FormValues>) => {
     <Form onSubmit={handleSubmit}>
       <h3>{text}</h3>
       <div>
-        <label>Email</label>
-        <Field
+        <Input
+          label='Email'
+          id='email'
           type='email'
           name='email'
           onChange={handleChange}
           onBlur={handleBlur}
           value={values.email}
         />
+
+        {touched.email && errors.email && <div>{errors.email}</div>}
       </div>
 
       <div>
-        <label>Password</label>
-        {touched.email && errors.email && <div>{errors.email}</div>}
-
-        <Field
+        <Input
+          label='Password'
+          id='password'
           type='password'
           name='password'
           onChange={handleChange}
