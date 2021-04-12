@@ -13,7 +13,7 @@ interface MetaProps {
 export const PageLayoutWithSEO: React.FC<PageLayoutWithSEOProps> = ({
   title,
   meta,
-}: PageLayoutWithSEOProps): JSX.Element => {
+}: PageLayoutWithSEOProps) => {
   return (
     <Head>
       <title>{title}</title>
