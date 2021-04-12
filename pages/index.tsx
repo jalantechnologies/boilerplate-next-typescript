@@ -1,12 +1,13 @@
 import Head from 'next/head';
+import React from 'react';
 import styles from '../styles/Home.module.css';
 import Link from 'next/link';
+import { GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
-
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
-const Home = () => {
+const HomePage: React.FunctionComponent<any> = () => {
   const router = useRouter();
   const { t } = useTranslation('common');
   return (
@@ -28,11 +29,10 @@ const Home = () => {
   );
 };
 
-export const getStaticProps = async ({ locale }) => ({
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
   props: {
     ...(await serverSideTranslations(locale, ['common'])),
   },
 });
 
-export default Home;
-
+export default HomePage;
