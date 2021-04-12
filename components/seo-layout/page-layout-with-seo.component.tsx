@@ -1,14 +1,14 @@
 import React from 'react';
 import Head from 'next/head';
 
-interface PageLayoutWithSEOProps {
+type PageLayoutWithSEOProps = {
   title: string;
   meta: MetaProps;
-}
+};
 
-interface MetaProps {
+type MetaProps = {
   description: string;
-}
+};
 
 export const PageLayoutWithSEO: React.FC<PageLayoutWithSEOProps> = ({
   title,
