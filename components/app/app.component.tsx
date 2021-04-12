@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { HomeComponent } from '@components';
 import Image from 'next/image';
-import { withTranslation } from '../../i18n';
+
 const AppComponent = (): JSX.Element => {
   return (
     <div>
@@ -11,9 +11,9 @@ const AppComponent = (): JSX.Element => {
         width={200}
         height={200}
       />
-      <HomeComponent />
+      <HomeComponent text={'Hello World'} />
     </div>
   );
 };
 
-export default withTranslation('common')(AppComponent);
+export default AppComponent;

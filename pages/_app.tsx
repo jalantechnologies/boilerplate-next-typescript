@@ -1,20 +1,7 @@
-import React from 'react';
-import App from 'next/app';
-import '../styles/globals.css';
-import { appWithTranslation } from '../i18n';
+import '../styles/globals.css'
 
-const MyApp = ({ Component, pageProps }) => {
-  return (
-    <React.Fragment>
-      <Component {...pageProps} />
-    </React.Fragment>
-  );
-};
-
-async function getProps(appContext) {
-  return await App.getInitialProps(appContext);
+function MyApp({ Component, pageProps }) {
+  return <Component {...pageProps} />
 }
 
-MyApp.getInitialProps = getProps;
-
-export default appWithTranslation(MyApp);
+export default MyApp
