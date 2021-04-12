@@ -35,3 +35,4 @@ export const getStaticProps = async ({ locale }) => ({
 });
 
 export default Home;
+

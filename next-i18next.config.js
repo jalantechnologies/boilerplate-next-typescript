@@ -6,3 +6,4 @@ module.exports = {
   localeSubpaths: { fr: 'fr' },
   localePath: 'public/locales',
 };
+
