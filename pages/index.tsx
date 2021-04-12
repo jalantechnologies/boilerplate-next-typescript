@@ -6,9 +6,7 @@ export default function Home() {
     <div className={styles.container}>
       <PageLayoutWithSEO
         title={'Create Next App'}
-        description={
-          'This is a page for creating next app for next js introduction'
-        }
+        meta={'This is a page for creating next app for next js introduction'}
       />
 
       <main className={styles.main}>
