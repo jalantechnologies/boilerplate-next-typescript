@@ -5,8 +5,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <PageLayoutWithSEO
-        title={'Create Next App'}
-        // TODO agentraghav: Localize
+        title={'Create Next App'} // TODO agentraghav: Localize
         meta={{
           description:
             'This is a page for creating next app for next js introduction',
