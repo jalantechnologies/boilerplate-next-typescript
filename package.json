@@ -9,7 +9,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "lint": "eslint --ext .ts,.tsx",
+    "lint": "eslint pages --ext .ts,.tsx",
     "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
