@@ -1,18 +1,17 @@
 import '../styles/globals.css';
 import * as Sentry from '@sentry/react';
-import { Integrations } from '@sentry/tracing';
 import CONFIG from '@config';
 
 if (CONFIG.sentryDSN) {
-  Sentry.init({
-    dsn: CONFIG.sentryDSN,
-    integrations: [new Integrations.BrowserTracing()],
-    tracesSampleRate: 1.0,
-  });
+  Sentry.init({ dsn: CONFIG.sentryDSN });
 }
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  return (
+    <Sentry.ErrorBoundary>
+      <Component {...pageProps} />
+    </Sentry.ErrorBoundary>
+  );
 }
 
 export default MyApp;
