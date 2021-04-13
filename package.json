@@ -9,7 +9,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "lint": "eslint --fix ./pages/**/*.ts[x]"
+    "lint": "eslint ./pages/**/*.ts[x]"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^4.22.0",
