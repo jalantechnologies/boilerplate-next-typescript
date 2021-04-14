@@ -8,12 +8,12 @@ if (CONFIG.sentryDSN) {
   Sentry.init({ dsn: CONFIG.sentryDSN });
 }
 
-function App({ Component, pageProps }: AppProps) {
+const App: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <Sentry.ErrorBoundary>
       <Component {...pageProps} />
     </Sentry.ErrorBoundary>
   );
-}
+};
 
 export default App;
