@@ -8,30 +8,24 @@ type FormValues = {
   password: string;
 };
 
-type OtherProps = {
-  text?: string;
-};
-
 type MyFormProps = {
   initialEmail?: string;
   initialPassword?: string;
 };
 
-const InnerForm = (props: OtherProps & FormikProps<FormValues>) => {
+const InnerForm: React.FC<FormikProps<FormValues>> = (props) => {
   const {
-    values,
-    errors,
-    touched,
+    handleSubmit,
     handleChange,
     handleBlur,
-    handleSubmit,
+    values,
+    touched,
+    errors,
     isSubmitting,
-    text,
   } = props;
 
   return (
     <Form onSubmit={handleSubmit}>
-      <h3>{text}</h3>
       <div>
         <Input
           label='Email'

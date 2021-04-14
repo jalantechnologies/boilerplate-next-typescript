@@ -12,8 +12,10 @@ const AppComponent: React.FC = () => {
           width={IMG_CONFIG.width}
           height={IMG_CONFIG.height}
         />
-        <HomeComponent text={'Hello World'} />{' '}
-        {/*TODO : agentraghav = localize*/}
+        <div>
+          <h3>Hello World</h3> {/*TODO : agentraghav = localize*/}
+        </div>
+        <HomeComponent /> {/*TODO : agentraghav = localize*/}
       </div>
     </React.Fragment>
   );
