@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { withFormik, FormikProps, FormikErrors, Form, Field } from 'formik';
+import { withFormik, FormikProps, Form } from 'formik';
 import * as Yup from 'yup';
 import Input from '../input-field/input';
 
@@ -81,8 +81,8 @@ const HomeComponent = withFormik<MyFormProps, FormValues>({
   }),
 
   validationSchema: Yup.object().shape({
-    email: Yup.string().email('Email not valid').required('Email is required'),
-    password: Yup.string().required('Password is required'),
+    email: Yup.string().email('Email not valid').required('Email is required'), // TODO : agentraghav = localize
+    password: Yup.string().required('Password is required'), // TODO : agentraghav = localize
   }),
 
   handleSubmit(

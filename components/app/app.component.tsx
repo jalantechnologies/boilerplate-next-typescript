@@ -1,18 +1,21 @@
-import * as React from 'react';
+import React from 'react';
 import { HomeComponent } from '@components';
 import Image from 'next/image';
-
-const AppComponent = (): JSX.Element => {
+import IMG_CONFIG from './image-config';
+const AppComponent: React.FC = () => {
   return (
-    <div>
-      <Image
-        src={require('@assets/images/logo.png')}
-        alt='logo'
-        width={200}
-        height={200}
-      />
-      <HomeComponent text={'Hello World'} />
-    </div>
+    <React.Fragment>
+      <div>
+        <Image
+          src={require('@assets/images/logo.png')}
+          alt='logo'
+          width={IMG_CONFIG.width}
+          height={IMG_CONFIG.height}
+        />
+        <HomeComponent text={'Hello World'} />{' '}
+        {/*TODO : agentraghav = localize*/}
+      </div>
+    </React.Fragment>
   );
 };
 
