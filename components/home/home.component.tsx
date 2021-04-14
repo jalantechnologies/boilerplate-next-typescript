@@ -3,19 +3,19 @@ import { withFormik, FormikProps, Form } from 'formik';
 import * as Yup from 'yup';
 import Input from '../input-field/input';
 
-interface FormValues {
+type FormValues = {
   email: string;
   password: string;
-}
+};
 
-interface OtherProps {
+type OtherProps = {
   text?: string;
-}
+};
 
-interface MyFormProps {
+type MyFormProps = {
   initialEmail?: string;
   initialPassword?: string;
-}
+};
 
 const InnerForm = (props: OtherProps & FormikProps<FormValues>) => {
   const {
