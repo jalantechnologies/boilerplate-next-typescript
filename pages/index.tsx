@@ -1,9 +1,9 @@
 import Head from 'next/head';
-import { AppComponent } from '../components';
+import { AppComponent } from '@components';
 import styles from '../styles/Home.module.css';
-import React from 'react'
+import React from 'react';
 
-const HomePage:React.FC=() => {
+const HomePage: React.FC = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -13,6 +13,6 @@ const HomePage:React.FC=() => {
       <AppComponent />
     </div>
   );
-}
+};
 
 export default HomePage;
