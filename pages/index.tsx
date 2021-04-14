@@ -1,7 +1,8 @@
 import { PageLayoutWithSEO } from '../components/seo-layout/page-layout-with-seo.component';
 import styles from '../styles/Home.module.css';
+import React from 'react';
 
-export default function Home() {
+const HomePage: React.FC = () => {
   return (
     <div className={styles.container}>
       <PageLayoutWithSEO
@@ -22,6 +23,7 @@ export default function Home() {
         <p className={styles.description}>
           Get started by editing
           {/* TODO agentraghav: Localize*/}
+          Get started by editing{' '}
           <code className={styles.code}>pages/index.js</code>
         </p>
 
@@ -60,6 +62,7 @@ export default function Home() {
             className={styles.card}>
             <h3>Deploy &rarr;</h3>
             {/* TODO agentraghav: Localize*/}
+
             <p>
               Instantly deploy your Next.js site to a public URL with Vercel.{' '}
               {/* TODO agentraghav: Localize*/}
@@ -80,4 +83,6 @@ export default function Home() {
       </footer>
     </div>
   );
-}
+};
+
+export default HomePage;
