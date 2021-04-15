@@ -10,7 +10,7 @@ type PageLayoutWithSEOProps = {
   meta: MetaProps;
 };
 
-export const PageLayoutWithSEO: React.FC<PageLayoutWithSEOProps> = ({
+const PageLayoutWithSEO: React.FC<PageLayoutWithSEOProps> = ({
   title,
   meta,
 }: PageLayoutWithSEOProps) => {
@@ -22,3 +22,5 @@ export const PageLayoutWithSEO: React.FC<PageLayoutWithSEOProps> = ({
     </Head>
   );
 };
+
+export default PageLayoutWithSEO;
