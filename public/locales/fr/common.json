@@ -1,5 +1,8 @@
 {
-  "title": "Bonjour le monde",
+  "title": "Next js",
+  "text": "Bonjour le monde",
   "change-locale": "changer de langue",
-  "description": "ceci est une page Web basée sur le passe-partout js suivant"
+  "description": "ceci est une page Web basée sur le passe-partout js suivant",
+  "email-error": "Email invalide",
+  "password-error": "Mot de passe requis"
 }

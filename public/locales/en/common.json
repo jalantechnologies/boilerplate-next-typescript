@@ -1,5 +1,8 @@
 {
-  "title": "Hello World",
+  "title": "Next JS",
+  "text": "Hello World",
   "change-locale": "Change locale",
-  "description": "this is a web-page based on next js boilerplate"
+  "description": "this is a web-page based on next js boilerplate",
+  "email-error": "Invalid Email",
+  "password-error": "Password required"
 }

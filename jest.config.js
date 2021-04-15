@@ -8,5 +8,6 @@ module.exports = {
       '<rootDir>/__mocks__/fileMock.ts',
     '\\.(css|less)$': '<rootDir>/__mocks__/styleMock.ts',
     '@components(.*)$': '<rootDir>/components/$1',
+    '@assets(.*)$': '<rootDir>/assets/$1',
   },
 };
