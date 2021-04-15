@@ -2,6 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
+      "@config": ["utils/config.ts"],
       "@components": ["components"],
       "@assets/*": ["assets/*"]
     },

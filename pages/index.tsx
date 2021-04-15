@@ -6,6 +6,7 @@ import { PageLayoutWithSEO } from '@components';
 const HomePage: React.FC = () => {
   return (
     <div className={styles.container}>
+
       <PageLayoutWithSEO
       title={'Create Next App'} // TODO agentraghav: Localize
       meta={{
