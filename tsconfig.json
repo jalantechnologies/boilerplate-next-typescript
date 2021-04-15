@@ -2,7 +2,9 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@config": ["utils/config.ts"]
+      "@config": ["utils/config.ts"],
+      "@components": ["components"],
+      "@assets/*": ["assets/*"]
     },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
@@ -19,6 +21,7 @@
     "isolatedModules": true,
     "jsx": "preserve"
   },
+
   "include": [
     "next-env.d.ts",
     "**/*.ts",
