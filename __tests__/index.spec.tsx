@@ -1,11 +1,11 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
-import Home from '../pages/index';
+import HomePage from '../pages/index';
 
 describe('Pages', () => {
   describe('Index', () => {
     it('should render without throwing an error', function () {
-      render(<Home />);
+      render(<HomePage />);
       const main = screen.getByRole('main');
       expect(main).toBeInTheDocument();
     });
