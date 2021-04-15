@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import React from 'react';
 import styles from '../styles/Home.module.css';
 import Link from 'next/link';
@@ -6,16 +5,19 @@ import { GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { PageLayoutWithSEO } from '@components';
 
 const HomePage: React.FunctionComponent<any> = () => {
   const router = useRouter();
   const { t } = useTranslation('common');
   return (
     <div className={styles.container}>
-      <Head>
-        <title>{t('title')}</title>
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
+      <PageLayoutWithSEO
+        title={t('title')}
+        meta={{
+          description: t('description'),
+        }}
+      />
 
       <main className={styles.main}>
         <h1 className={styles.title}>{t('title')}</h1>
