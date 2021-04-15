@@ -2,7 +2,8 @@ import '../styles/globals.css';
 import React from 'react';
 import * as Sentry from '@sentry/react';
 import CONFIG from '@config';
-import { AppProps } from 'next/app';
+import { appWithTranslation } from 'next-i18next';
+import type { AppProps } from 'next/app';
 
 if (CONFIG.sentryDSN) {
   Sentry.init({ dsn: CONFIG.sentryDSN });
@@ -16,4 +17,4 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
   );
 };
 
-export default App;
+export default appWithTranslation(App);

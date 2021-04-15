@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { withFormik, FormikProps, Form } from 'formik';
 import * as Yup from 'yup';
-import Input from '../input-field/input';
+import { Input } from '@components';
+import { useTranslation } from 'next-i18next';
 
 type FormValues = {
   email: string;
@@ -23,7 +24,7 @@ const InnerForm: React.FC<FormikProps<FormValues>> = (props) => {
     errors,
     isSubmitting,
   } = props;
-
+  const { t } = useTranslation('common');
   return (
     <Form onSubmit={handleSubmit}>
       <div>
@@ -37,7 +38,9 @@ const InnerForm: React.FC<FormikProps<FormValues>> = (props) => {
           value={values.email}
         />
 
-        {touched.email && errors.email && <div>{errors.email}</div>}
+        {touched.email && errors.email && (
+          <div className='text-error'>{t('email-error')}</div>
+        )}
       </div>
 
       <div>
@@ -50,7 +53,9 @@ const InnerForm: React.FC<FormikProps<FormValues>> = (props) => {
           onBlur={handleBlur}
           value={values.password}
         />
-        {touched.password && errors.password && <div>{errors.password}</div>}
+        {touched.password && errors.password && (
+          <div className='text-error'>{t('password-error')}</div>
+        )}
       </div>
 
       <div>
@@ -75,8 +80,8 @@ const HomeComponent = withFormik<MyFormProps, FormValues>({
   }),
 
   validationSchema: Yup.object().shape({
-    email: Yup.string().email('Email not valid').required('Email is required'), // TODO : agentraghav = localize
-    password: Yup.string().required('Password is required'), // TODO : agentraghav = localize
+    email: Yup.string().email().required(),
+    password: Yup.string().required(),
   }),
 
   handleSubmit(

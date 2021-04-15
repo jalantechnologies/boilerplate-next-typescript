@@ -1,8 +1,10 @@
 import React from 'react';
 import { HomeComponent } from '@components';
 import Image from 'next/image';
+import { useTranslation } from 'next-i18next';
 import IMG_CONFIG from './image-config';
 const AppComponent: React.FC = () => {
+  const { t } = useTranslation('common');
   return (
     <React.Fragment>
       <div>
@@ -13,9 +15,9 @@ const AppComponent: React.FC = () => {
           height={IMG_CONFIG.height}
         />
         <div>
-          <h3>Hello World</h3> {/*TODO : agentraghav = localize*/}
+          <h3>{t('text')}</h3>
         </div>
-        <HomeComponent /> {/*TODO : agentraghav = localize*/}
+        <HomeComponent />
       </div>
     </React.Fragment>
   );

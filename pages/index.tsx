@@ -1,23 +1,31 @@
 import React from 'react';
 import styles from '../styles/Home.module.css';
-import { AppComponent } from '@components';
-import { PageLayoutWithSEO } from '@components';
+import { GetStaticProps } from 'next';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { PageLayoutWithSEO, AppComponent } from '@components';
 
-const HomePage: React.FC = () => {
+const HomePage: React.FunctionComponent<any> = () => {
+  const { t } = useTranslation('common');
   return (
     <div className={styles.container}>
-
       <PageLayoutWithSEO
-      title={'Create Next App'} // TODO agentraghav: Localize
-      meta={{
-        description:
-          'This is a page for creating next app for next js introduction',
-        // TODO agentraghav: Localize
-      }}
-    />
-      <AppComponent />
+        title={t('title')}
+        meta={{
+          description: t('description'),
+        }}
+      />
+      <main className={styles.main}>
+        <AppComponent />
+      </main>
     </div>
   );
 };
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ['common'])),
+  },
+});
 
 export default HomePage;

@@ -11,6 +11,29 @@ jest.mock('next/image', () => ({
   },
 }));
 
+jest.mock('next/router', () => ({
+  useRouter() {
+    return {
+      route: '/',
+      pathname: '',
+      query: '',
+      asPath: '',
+    };
+  },
+}));
+
+jest.mock('next-i18next', () => ({
+  // this mock makes sure any components using the translate hook can use it without a warning being shown
+  useTranslation: () => {
+    return {
+      t: (str) => str,
+      i18n: {
+        changeLanguage: () => new Promise(() => {}),
+      },
+    };
+  },
+}));
+
 describe('Pages', () => {
   describe('Index', () => {
     it('should render without throwing an error', function () {

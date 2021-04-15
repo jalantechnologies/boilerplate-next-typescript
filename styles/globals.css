@@ -19,3 +19,8 @@ a {
   width: 200px;
   height: 200px;
 }
+
+.text-error {
+  font-size: 13px;
+  color: red;
+}
