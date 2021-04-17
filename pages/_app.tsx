@@ -1,7 +1,20 @@
-import '../styles/globals.css'
+import '../styles/globals.css';
+import React from 'react';
+import * as Sentry from '@sentry/react';
+import CONFIG from '@config';
+import { appWithTranslation } from 'next-i18next';
+import type { AppProps } from 'next/app';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+if (CONFIG.sentryDSN) {
+  Sentry.init({ dsn: CONFIG.sentryDSN });
 }
 
-export default MyApp
+const App: React.FC<AppProps> = ({ Component, pageProps }) => {
+  return (
+    <Sentry.ErrorBoundary>
+      <Component {...pageProps} />
+    </Sentry.ErrorBoundary>
+  );
+};
+
+export default appWithTranslation(App);
