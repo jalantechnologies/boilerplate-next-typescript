@@ -9,7 +9,7 @@ import * as Yup from 'yup';
 import { Input } from '@components';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
-
+import { ButtonInput } from '@components';
 type Values = {
   email: string;
   password: string;
@@ -77,15 +77,14 @@ const HomeComponent: React.FC<Values> = ({ email, password }) => {
             </div>
             <br />
             <div>
-              <button
-                type='submit'
+              <ButtonInput
+                intext='LogIn'
                 disabled={
                   isSubmitting ||
                   !!(errors.email && touched.email) ||
                   !!(errors.password && touched.password)
-                }>
-                Sign In
-              </button>
+                }
+              />
             </div>
           </Form>
         )}
