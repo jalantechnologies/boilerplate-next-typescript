@@ -4,5 +4,7 @@
   "change-locale": "Change locale",
   "description": "this is a web-page based on next js boilerplate",
   "email-error": "Invalid Email",
-  "password-error": "Password required"
+  "password-error": "Password required",
+  "heading": "About us",
+  "about_para": "We are a software company that provides software solutions to businesses. Our engineers have an average of 3+ years of industry experience. Our engineers have attended premium engineering colleges such as IIT, NIT as well worked at some of the technology giants."
 }

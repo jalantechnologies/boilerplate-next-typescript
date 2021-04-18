@@ -10,7 +10,12 @@ const AppComponent: React.FC = () => {
         <div>
           <h3>{t('text')}</h3>
         </div>
-        <HomeComponent />
+        <HomeComponent
+          email=''
+          password=''
+          email_error={t('email-error')}
+          password_error={t('password-error')}
+        />
       </div>
     </React.Fragment>
   );

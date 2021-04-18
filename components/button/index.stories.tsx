@@ -5,6 +5,7 @@ import { Story } from '@storybook/react';
 type ButtonProps = {
   intext: string;
   disabled: boolean;
+  onClick: () => void;
 };
 
 const Template: Story<ButtonProps> = (args) => <ButtonInput {...args} />;

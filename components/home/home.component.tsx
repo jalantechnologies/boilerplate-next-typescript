@@ -7,16 +7,22 @@ import {
 } from 'formik';
 import * as Yup from 'yup';
 import { Input } from '@components';
-import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 import { ButtonInput } from '@components';
+
 type Values = {
   email: string;
   password: string;
+  email_error: string;
+  password_error: string;
 };
 
-const HomeComponent: React.FC<Values> = ({ email, password }) => {
-  const { t } = useTranslation('common');
+const HomeComponent: React.FC<Values> = ({
+  email,
+  password,
+  email_error,
+  password_error,
+}) => {
   const router = useRouter();
   return (
     <div className='container'>
@@ -57,7 +63,7 @@ const HomeComponent: React.FC<Values> = ({ email, password }) => {
               />
 
               {touched.email && errors.email && (
-                <div className='text-error'>{t('email-error')}</div>
+                <div className='text-error'>{email_error}</div>
               )}
             </div>
 
@@ -72,13 +78,13 @@ const HomeComponent: React.FC<Values> = ({ email, password }) => {
                 value={values.password}
               />
               {touched.password && errors.password && (
-                <div className='text-error'>{t('password-error')}</div>
+                <div className='text-error'>{password_error}</div>
               )}
             </div>
             <br />
             <div>
               <ButtonInput
-                intext='LogIn'
+                intext='Log In'
                 disabled={
                   isSubmitting ||
                   !!(errors.email && touched.email) ||
