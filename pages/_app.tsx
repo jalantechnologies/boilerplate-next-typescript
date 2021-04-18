@@ -9,6 +9,12 @@ if (CONFIG.sentryDSN) {
   Sentry.init({ dsn: CONFIG.sentryDSN });
 }
 
+/**
+ * Some documented component
+ *
+ * @component
+ */
+
 const App: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <Sentry.ErrorBoundary>

@@ -4,6 +4,12 @@ import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { PageLayoutWithSEO, AboutComponent } from '@components';
 
+/**
+ * Some documented component
+ *
+ * @component
+ */
+
 const AboutPage: React.FunctionComponent<any> = () => {
   const { t } = useTranslation('common');
   return (

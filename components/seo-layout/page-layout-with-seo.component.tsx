@@ -10,12 +10,6 @@ type PageLayoutWithSEOProps = {
   meta: MetaProps;
 };
 
-/**
- * Some documented component
- *
- * @component
- */
-
 const PageLayoutWithSEO: React.FC<PageLayoutWithSEOProps> = ({
   title,
   meta,

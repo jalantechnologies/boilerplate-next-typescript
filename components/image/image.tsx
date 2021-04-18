@@ -6,12 +6,6 @@ type ImageProps = {
   src: string;
 };
 
-/**
- * Some documented component
- *
- * @component
- */
-
 const ImageLogo: React.FC<ImageProps> = ({ src }) => {
   return (
     <Image

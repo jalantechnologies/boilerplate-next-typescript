@@ -17,12 +17,6 @@ type Values = {
   password_error: string;
 };
 
-/**
- * Some documented component
- *
- * @component
- */
-
 const HomeComponent: React.FC<Values> = ({
   email,
   password,

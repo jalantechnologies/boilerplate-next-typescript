@@ -2,12 +2,6 @@ import React from 'react';
 import { HomeComponent, ImageLogo } from '@components';
 import { useTranslation } from 'next-i18next';
 
-/**
- * Some documented component
- *
- * @component
- */
-
 const AppComponent: React.FC = () => {
   const { t } = useTranslation('common');
   return (

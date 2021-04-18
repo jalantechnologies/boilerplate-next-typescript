@@ -7,7 +7,7 @@
   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> app/app.component.tsx</title>
+  <title> index.tsx</title>
 
   <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -72,7 +72,7 @@
             
             <nav>
                 
-                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Global</h3><ul><li><a href="global.html#AboutComponent">AboutComponent</a></li><li><a href="global.html#AppComponent">AppComponent</a></li><li><a href="global.html#HomeComponent">HomeComponent</a></li><li><a href="global.html#ImageLogo">ImageLogo</a></li><li><a href="global.html#Input">Input</a></li><li><a href="global.html#PageLayoutWithSEO">PageLayoutWithSEO</a></li></ul></div>
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Global</h3><ul><li><a href="global.html#AboutPage">AboutPage</a></li><li><a href="global.html#HomePage">HomePage</a></li></ul></div>
                 
             </nav>
         </div>
@@ -80,7 +80,7 @@
             <div class="content">
                 <header class="page-title">
                     <p>Source</p>
-                    <h1>app/app.component.tsx</h1>
+                    <h1>index.tsx</h1>
                 </header>
                 
 
@@ -90,8 +90,11 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>import React from 'react';
-import { HomeComponent, ImageLogo } from '@components';
+import styles from '../styles/Home.module.css';
+import { GetStaticProps } from 'next';
 import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { PageLayoutWithSEO, AppComponent } from '@components';
 
 /**
  * Some documented component
@@ -99,27 +102,30 @@ import { useTranslation } from 'next-i18next';
  * @component
  */
 
-const AppComponent: React.FC = () => {
+const HomePage: React.FunctionComponent&lt;any> = () => {
   const { t } = useTranslation('common');
   return (
-    &lt;React.Fragment>
-      &lt;div>
-        &lt;ImageLogo src={require('@assets/images/logo.png')} />
-        &lt;div>
-          &lt;h3>{t('text')}&lt;/h3>
-        &lt;/div>
-        &lt;HomeComponent
-          email=''
-          password=''
-          email_error={t('email-error')}
-          password_error={t('password-error')}
-        />
-      &lt;/div>
-    &lt;/React.Fragment>
+    &lt;div className={styles.container}>
+      &lt;PageLayoutWithSEO
+        title={t('title')}
+        meta={{
+          description: t('description'),
+        }}
+      />
+      &lt;main className={styles.main}>
+        &lt;AppComponent />
+      &lt;/main>
+    &lt;/div>
   );
 };
 
-export default AppComponent;
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ['common'])),
+  },
+});
+
+export default HomePage;
 </code></pre>
         </article>
     </section>

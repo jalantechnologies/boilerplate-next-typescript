@@ -5,12 +5,6 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label: string;
 }
 
-/**
- * Some documented component
- *
- * @component
- */
-
 const Input: React.FC<InputProps> = ({ name, label, ...rest }) => {
   return (
     <div className='input-wrapper'>

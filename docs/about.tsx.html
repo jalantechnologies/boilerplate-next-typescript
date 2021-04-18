@@ -72,7 +72,7 @@
             
             <nav>
                 
-                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Global</h3><ul><li><a href="global.html#AboutComponent">AboutComponent</a></li></ul></div>
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Global</h3><ul><li><a href="global.html#AboutPage">AboutPage</a></li><li><a href="global.html#HomePage">HomePage</a></li></ul></div>
                 
             </nav>
         </div>
@@ -90,13 +90,10 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>import React from 'react';
-import { useRouter } from 'next/router';
-import { ImageLogo, ButtonInput } from '@components';
-
-type AboutProps = {
-  heading: string;
-  about_para: string;
-};
+import { GetStaticProps } from 'next';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { PageLayoutWithSEO, AboutComponent } from '@components';
 
 /**
  * Some documented component
@@ -104,32 +101,30 @@ type AboutProps = {
  * @component
  */
 
-const AboutComponent: React.FC&lt;AboutProps> = ({ heading, about_para }) => {
-  const router = useRouter();
-  const logout = (): void => {
-    router.push('/');
-  };
+const AboutPage: React.FunctionComponent&lt;any> = () => {
+  const { t } = useTranslation('common');
   return (
-    &lt;React.Fragment>
-      &lt;div className='container-box'>
-        &lt;ImageLogo src={require('@assets/images/logo.png')} />
-        &lt;div>
-          &lt;h3>{heading}&lt;/h3>
-        &lt;/div>
-        &lt;br />
-        &lt;div>
-          &lt;ButtonInput onClick={logout} disabled intext='logout' />
-        &lt;/div>
-        &lt;br />
-        &lt;div>
-          &lt;p>{about_para}&lt;/p>
-        &lt;/div>
-      &lt;/div>
-    &lt;/React.Fragment>
+    &lt;div className='container-box'>
+      &lt;PageLayoutWithSEO
+        title={t('title')}
+        meta={{
+          description: t('description'),
+        }}
+      />
+      &lt;main>
+        &lt;AboutComponent heading={t('heading')} about_para={t('about_para')} />
+      &lt;/main>
+    &lt;/div>
   );
 };
 
-export default AboutComponent;
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ['common'])),
+  },
+});
+
+export default AboutPage;
 </code></pre>
         </article>
     </section>
