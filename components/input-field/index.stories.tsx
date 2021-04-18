@@ -9,16 +9,16 @@ type InputProps = {
 
 const Template: Story<InputProps> = (args) => <Input {...args} />;
 
-export const InputStory = Template.bind({});
-InputStory.args = {
+export const InputStoryEmail = Template.bind({});
+InputStoryEmail.args = {
   name: 'email',
   label: 'Email',
 };
 
-export const EmptyInputStory = Template.bind({});
-EmptyInputStory.args = {
-  name: '',
-  label: '',
+export const InputStoryPassword = Template.bind({});
+InputStoryPassword.args = {
+  name: 'password',
+  label: 'Password',
 };
 
 export default {
