@@ -7,6 +7,12 @@ type AboutProps = {
   about_para: string;
 };
 
+/**
+ * Some documented component
+ *
+ * @component
+ */
+
 const AboutComponent: React.FC<AboutProps> = ({ heading, about_para }) => {
   const router = useRouter();
   const logout = (): void => {

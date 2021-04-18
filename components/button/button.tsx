@@ -1,6 +1,12 @@
 import * as React from 'react';
 import { Button } from 'baseui/button';
 
+/**
+ * Some documented component
+ *
+ * @component
+ */
+
 type ButtonProps = {
   intext: string;
   disabled: boolean;
