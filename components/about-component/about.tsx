@@ -1,5 +1,6 @@
 import React from 'react';
 import { useRouter } from 'next/router';
+import { useTranslation } from 'next-i18next';
 import { ImageLogo, ButtonInput } from '@components';
 
 type AboutProps = {
@@ -9,6 +10,7 @@ type AboutProps = {
 
 const AboutComponent: React.FC<AboutProps> = ({ heading, about_para }) => {
   const router = useRouter();
+  const { t } = useTranslation('common');
   const logout = (): void => {
     router.push('/');
   };
@@ -21,7 +23,7 @@ const AboutComponent: React.FC<AboutProps> = ({ heading, about_para }) => {
         </div>
         <br />
         <div>
-          <ButtonInput onClick={logout} disabled text='logout' />
+          <ButtonInput onClick={logout} disabled text={t('logout')} />
         </div>
         <br />
         <div>

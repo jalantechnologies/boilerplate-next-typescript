@@ -2,9 +2,12 @@
   "title": "Next js",
   "text": "Bonjour le monde",
   "change-locale": "changer de langue",
+  "login":"connexion",
+  "logout":"Se déconnecter",
+  "password":"le mot de passe",
   "description": "ceci est une page Web basée sur le passe-partout js suivant",
   "email-error": "Email invalide",
   "password-error": "Mot de passe requis",
   "heading": "À PROPOS DE NOUS",
-  "about": "Nous sommes une société de logiciels qui fournit des solutions logicielles aux entreprises.Nos ingénieurs ont en moyenne plus de 3 ans d'expérience dans l'industrie. Nos ingénieurs ont fréquenté des écoles d'ingénieurs haut de gamme telles que l'IIT, le NIT et ont également travaillé chez certains des géants de la technologie."
+  "about_para": "Nous sommes une société de logiciels qui fournit des solutions logicielles aux entreprises.Nos ingénieurs ont en moyenne plus de 3 ans d'expérience dans l'industrie. Nos ingénieurs ont fréquenté des écoles d'ingénieurs haut de gamme telles que l'IIT, le NIT et ont également travaillé chez certains des géants de la technologie."
 }

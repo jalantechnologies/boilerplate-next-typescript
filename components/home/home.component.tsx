@@ -7,6 +7,7 @@ import {
 } from 'formik';
 import * as Yup from 'yup';
 import { Input } from '@components';
+import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 import { ButtonInput } from '@components';
 
@@ -24,6 +25,7 @@ const HomeComponent: React.FC<Values> = ({
   password_error,
 }) => {
   const router = useRouter();
+  const { t } = useTranslation('common');
   return (
     <div className='container'>
       <Formik
@@ -69,7 +71,7 @@ const HomeComponent: React.FC<Values> = ({
 
             <div>
               <Input
-                label='Password'
+                label={t('password')}
                 id='password'
                 type='password'
                 name='password'
@@ -84,7 +86,7 @@ const HomeComponent: React.FC<Values> = ({
             <br />
             <div>
               <ButtonInput
-                text='Log In'
+                text={t('login')}
                 disabled={
                   isSubmitting ||
                   !!(errors.email && touched.email) ||

@@ -1,6 +1,9 @@
 {
   "title": "Next JS",
   "text": "Hello World",
+  "login":"Log In",
+  "logout":"Log Out",
+  "password":"Password",
   "change-locale": "Change locale",
   "description": "this is a web-page based on next js boilerplate",
   "email-error": "Invalid Email",
