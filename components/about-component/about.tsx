@@ -21,7 +21,7 @@ const AboutComponent: React.FC<AboutProps> = ({ heading, about_para }) => {
         </div>
         <br />
         <div>
-          <ButtonInput onClick={logout} disabled intext='logout' />
+          <ButtonInput onClick={logout} disabled text='logout' />
         </div>
         <br />
         <div>

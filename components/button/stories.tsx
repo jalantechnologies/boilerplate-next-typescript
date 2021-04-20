@@ -3,7 +3,7 @@ import ButtonInput from './button';
 import { Story } from '@storybook/react';
 
 type ButtonProps = {
-  intext: string;
+  text: string;
   disabled: boolean;
   onClick: () => void;
 };
@@ -12,13 +12,13 @@ const Template: Story<ButtonProps> = (args) => <ButtonInput {...args} />;
 
 export const LogInButton = Template.bind({});
 LogInButton.args = {
-  intext: 'login',
+  text: 'login',
   disabled: false,
 };
 
 export const LogOutButton = Template.bind({});
 LogOutButton.args = {
-  intext: 'logout',
+  text: 'logout',
 };
 
 export default {

@@ -84,7 +84,7 @@ const HomeComponent: React.FC<Values> = ({
             <br />
             <div>
               <ButtonInput
-                intext='Log In'
+                text='Log In'
                 disabled={
                   isSubmitting ||
                   !!(errors.email && touched.email) ||
