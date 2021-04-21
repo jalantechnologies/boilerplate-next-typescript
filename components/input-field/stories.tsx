@@ -7,18 +7,41 @@ type InputProps = {
   label: string;
 };
 
-const Template: Story<InputProps> = (args) => <Input {...args} />;
-
-export const InputStoryEmail = Template.bind({});
-InputStoryEmail.args = {
-  name: 'email',
-  label: 'Email',
+const getCaptionForLocaleEmail = (locale) => {
+  switch (locale) {
+    case 'fr':
+      return 'Email';
+    default:
+      return 'Email';
+  }
 };
 
-export const InputStoryPassword = Template.bind({});
+const getCaptionForLocalePassword = (locale) => {
+  switch (locale) {
+    case 'fr':
+      return 'le mot de passe';
+    default:
+      return 'Password';
+  }
+};
+
+const Template_Email: Story<InputProps> = (args, { globals: { locale } }) => (
+  <Input {...{ ...args, label: getCaptionForLocaleEmail(locale) }} />
+);
+
+const Template_Password: Story<InputProps> = (
+  args,
+  { globals: { locale } }
+) => <Input {...{ ...args, label: getCaptionForLocalePassword(locale) }} />;
+
+export const InputStoryEmail = Template_Email.bind({});
+InputStoryEmail.args = {
+  name: 'email',
+};
+
+export const InputStoryPassword = Template_Password.bind({});
 InputStoryPassword.args = {
   name: 'password',
-  label: 'Password',
 };
 
 export default {
