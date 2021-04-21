@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom';
-import { render, screen } from '@testing-library/react';
+import renderer from 'react-test-renderer';
 import HomePage from '../pages/index';
 
 jest.mock('next/image', () => ({
@@ -34,13 +34,10 @@ jest.mock('next-i18next', () => ({
   },
 }));
 
-describe('Pages', () => {
-  describe('Index', () => {
-    it('should render without throwing an error', function () {
-      render(<HomePage />);
-      expect(
-        screen.getByRole('heading', { name: 'Hello World' })
-      ).toBeInTheDocument();
-    });
+describe('With Snapshot Testing', () => {
+  it('App shows Hello World heading and form', () => {
+    const component = renderer.create(<HomePage />);
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });
