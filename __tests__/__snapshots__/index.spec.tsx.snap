@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`With Snapshot Testing App shows Hello World heading and form 1`] = `
+<div>
+  <main>
+    <div>
+      <img
+        alt="logo"
+        height={200}
+        src={
+          Object {
+            "default": "placeholder-file",
+          }
+        }
+        width={200}
+      />
+      <div>
+        <h3>
+          text
+        </h3>
+      </div>
+      <form
+        action="#"
+        onReset={[Function]}
+        onSubmit={[Function]}
+      >
+        <div>
+          <div
+            className="input-wrapper"
+          >
+            <label
+              htmlFor="email"
+            >
+              Email
+            </label>
+            <br />
+            <input
+              id="email"
+              onBlur={[Function]}
+              onChange={[Function]}
+              type="email"
+              value=""
+            />
+            <br />
+          </div>
+        </div>
+        <div>
+          <div
+            className="input-wrapper"
+          >
+            <label
+              htmlFor="password"
+            >
+              Password
+            </label>
+            <br />
+            <input
+              id="password"
+              onBlur={[Function]}
+              onChange={[Function]}
+              type="password"
+              value=""
+            />
+            <br />
+          </div>
+        </div>
+        <div>
+          <button
+            disabled={false}
+            type="submit"
+          >
+            Sign In
+          </button>
+        </div>
+      </form>
+    </div>
+  </main>
+</div>
+`;
