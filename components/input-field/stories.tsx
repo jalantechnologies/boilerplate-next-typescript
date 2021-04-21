@@ -10,7 +10,7 @@ type InputProps = {
 const getCaptionForLocaleEmail = (locale) => {
   switch (locale) {
     case 'fr':
-      return 'Email';
+      return 'E-mail';
     default:
       return 'Email';
   }
