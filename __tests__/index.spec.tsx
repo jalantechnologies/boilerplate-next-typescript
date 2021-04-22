@@ -1,6 +1,7 @@
 import '@testing-library/jest-dom';
 import renderer from 'react-test-renderer';
 import HomePage from '../pages/index';
+import {ButtonInput, Input, ImageLogo, AppComponent, HomeComponent, AboutComponent} from '@components'
 
 jest.mock('next/image', () => ({
   // eslint-disable-next-line @typescript-eslint/naming-convention
@@ -41,3 +42,54 @@ describe('With Snapshot Testing', () => {
     expect(tree).toMatchSnapshot();
   });
 });
+
+describe('With Snapshot Testing', () => {
+  it('App shows Button', () => {
+    const component = renderer.create(<ButtonInput />);
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+});
+
+describe('With Snapshot Testing', () => {
+  it('App shows Input Field', () => {
+    const component = renderer.create(<Input />);
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+});
+
+describe('With Snapshot Testing', () => {
+  it('App shows Image', () => {
+    const component = renderer.create(<ImageLogo />);
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+});
+
+describe('With Snapshot Testing', () => {
+  it('App shows Home Component with form', () => {
+    const component = renderer.create(<HomeComponent />);
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+});
+
+describe('With Snapshot Testing', () => {
+  it('App shows About Component with a button', () => {
+    const component = renderer.create(<AboutComponent />);
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+});
+
+describe('With Snapshot Testing', () => {
+  it('App shows App Component', () => {
+    const component = renderer.create(<AppComponent />);
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+});
+
+
+
