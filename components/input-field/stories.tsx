@@ -1,10 +1,13 @@
 import React from 'react';
-import Input from './input';
+import InputField from './input';
 import { Story } from '@storybook/react';
 
 type InputProps = {
   name: string;
   label: string;
+  onChange: () => void;
+  onBlur: () => void;
+  value: string;
 };
 
 const getCaptionForLocaleEmail = (locale) => {
@@ -26,13 +29,15 @@ const getCaptionForLocalePassword = (locale) => {
 };
 
 const Template_Email: Story<InputProps> = (args, { globals: { locale } }) => (
-  <Input {...{ ...args, label: getCaptionForLocaleEmail(locale) }} />
+  <InputField {...{ ...args, label: getCaptionForLocaleEmail(locale) }} />
 );
 
 const Template_Password: Story<InputProps> = (
   args,
   { globals: { locale } }
-) => <Input {...{ ...args, label: getCaptionForLocalePassword(locale) }} />;
+) => (
+  <InputField {...{ ...args, label: getCaptionForLocalePassword(locale) }} />
+);
 
 export const InputStoryEmail = Template_Email.bind({});
 InputStoryEmail.args = {
@@ -46,5 +51,5 @@ InputStoryPassword.args = {
 
 export default {
   title: 'Input Field',
-  component: Input,
+  component: InputField,
 };

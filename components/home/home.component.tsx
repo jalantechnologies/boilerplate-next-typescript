@@ -6,7 +6,7 @@ import {
   FormikHelpers as FormikActions,
 } from 'formik';
 import * as Yup from 'yup';
-import { Input } from '@components';
+import { InputField } from '@components';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 import { ButtonInput } from '@components';
@@ -54,7 +54,7 @@ const HomeComponent: React.FC<Values> = ({
         }: FormikProps<Values>) => (
           <Form>
             <div>
-              <Input
+              <InputField
                 label='Email'
                 id='email'
                 type='email'
@@ -70,7 +70,7 @@ const HomeComponent: React.FC<Values> = ({
             </div>
 
             <div>
-              <Input
+              <InputField
                 label={t('password')}
                 id='password'
                 type='password'

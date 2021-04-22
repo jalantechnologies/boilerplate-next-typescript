@@ -1,5 +1,7 @@
 import * as React from 'react';
-import { Button } from 'baseui/button';
+import { Button, KIND, SHAPE } from 'baseui/button';
+import { Provider as StyletronProvider } from 'styletron-react';
+import { styletron } from '../../styletron';
 
 type ButtonProps = {
   text: string;
@@ -8,7 +10,13 @@ type ButtonProps = {
 };
 
 const ButtonInput: React.FC<ButtonProps> = ({ text, disabled, onClick }) => {
-  return <Button onClick={onClick}>{text}</Button>;
+  return (
+    <StyletronProvider value={styletron}>
+      <Button onClick={onClick} kind={KIND.secondary} shape={SHAPE.pill}>
+        {text}
+      </Button>
+    </StyletronProvider>
+  );
 };
 
 export default ButtonInput;

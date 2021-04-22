@@ -1,19 +1,39 @@
-import React, { InputHTMLAttributes } from 'react';
+import React from 'react';
+import { Input } from 'baseui/input';
+import { Provider as StyletronProvider } from 'styletron-react';
+import { styletron } from '../../styletron';
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+interface InputProps {
   name: string;
   label: string;
+  onChange: () => void;
+  onBlur: () => void;
+  value: string;
 }
 
-const Input: React.FC<InputProps> = ({ name, label, ...rest }) => {
+const InputField: React.FC<InputProps> = ({
+  name,
+  label,
+  onChange,
+  onBlur,
+  value,
+}) => {
   return (
-    <div className='input-wrapper'>
-      <label htmlFor={name}>{label}</label>
-      <br />
-      <input id={name} {...rest} />
-      <br />
-    </div>
+    <StyletronProvider value={styletron}>
+      <div className='input-wrapper'>
+        <label htmlFor={name}>{label}</label>
+        <br />
+        <Input
+          id={name}
+          placeholder={label}
+          onChange={onChange}
+          onBlur={onBlur}
+          value={value}
+        />
+        <br />
+      </div>
+    </StyletronProvider>
   );
 };
 
-export default Input;
+export default InputField;
