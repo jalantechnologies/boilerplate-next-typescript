@@ -6,7 +6,7 @@ import { styletron } from '../../styletron';
 type ButtonProps = {
   text: string;
   disabled: boolean;
-  onClick: () => void;
+  onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
 };
 
 const ButtonInput: React.FC<ButtonProps> = ({ text, disabled, onClick }) => {
