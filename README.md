@@ -1,13 +1,5 @@
 # Boilerplate Next + TypeScript
 
-## Development server
-
-Run `npm run dev` for a dev server. Navigate to `http://localhost:8080/`. The app will automatically reload if you change any of the source files.
-
-## Build
-
-Run `npm run build` to build the project. The build artifacts will be stored in the dist/ directory.
-
 ## Features
 
 - **Next JS** - an open-source React front-end development web framework that enables functionality such as server-side rendering and generating static websites for React based web applications.

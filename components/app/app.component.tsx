@@ -1,22 +1,22 @@
 import React from 'react';
-import { HomeComponent, ImageLogo } from '@components';
 import { useTranslation } from 'next-i18next';
 
 const AppComponent: React.FC = () => {
   const { t } = useTranslation('common');
   return (
     <React.Fragment>
-      <div>
-        <ImageLogo src={require('@assets/images/logo.png')} />
-        <div>
-          <h3>{t('text')}</h3>
-        </div>
-        <HomeComponent
-          email=''
-          password=''
-          email_error={t('email-error')}
-          password_error={t('password-error')}
-        />
+      <div className='bg-class'>
+        <p className='heading'> Next JS Boilerplate</p>
+        <div className='next-logo'></div>
+        <div className='base-logo'></div>
+        <div className='eslint-logo'></div>
+        <div className='storybook-logo'></div>
+        <div className='seo-logo'></div>
+        <div className='ts-logo'></div>
+        <div className='sentry-logo'></div>
+        <div className='i18n-logo'></div>
+        <div className='jest-logo'></div>
+        <div className='formik-logo'></div>
       </div>
     </React.Fragment>
   );

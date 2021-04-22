@@ -2,12 +2,15 @@
   "title": "Next js",
   "text": "Bonjour le monde",
   "change-locale": "changer de langue",
-  "login":"connexion",
-  "logout":"Se déconnecter",
-  "password":"le mot de passe",
+  "login": "connexion",
+  "logout": "Se déconnecter",
+  "password": "le mot de passe",
   "description": "ceci est une page Web basée sur le passe-partout js suivant",
   "email-error": "Email invalide",
   "password-error": "Mot de passe requis",
   "heading": "À PROPOS DE NOUS",
-  "about_para": "Nous sommes une société de logiciels qui fournit des solutions logicielles aux entreprises.Nos ingénieurs ont en moyenne plus de 3 ans d'expérience dans l'industrie. Nos ingénieurs ont fréquenté des écoles d'ingénieurs haut de gamme telles que l'IIT, le NIT et ont également travaillé chez certains des géants de la technologie."
+  "readme": "Readme",
+  "storybook": "Storybook",
+  "about_para1": "Un passe-partout Next.js prêt pour la production bien structuré avec Typescript un exposant de Javascript, Jest et enzyme pour les tests automatisés, Express js.",
+  "about_para2": "un outil open source pour développer des composants d'interface utilisateur de manière isolée pour React. Fonctionnalité SEO (Search Engine Optimization) qui est la clé d'un bon classement sur Google et d'autres moteurs de recherche, en utilisant Server Side Rendring of next js, en incorporant Formik, Baseweb en tant que boîte à outils d'interface utilisateur, la localisation de la langue à l'aide de la fonctionnalité next-i18next, Sentry, un déploiement facile sur vercel, pour plus d'informations, consultez le "
 }
