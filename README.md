@@ -1,13 +1,5 @@
 # Boilerplate Next + TypeScript
 
-## Development server
-
-Run `npm run dev` for a dev server. Navigate to `http://localhost:8080/`. The app will automatically reload if you change any of the source files.
-
-## Build
-
-Run `npm run build` to build the project. The build artifacts will be stored in the dist/ directory.
-
 ## Features
 
 - **Next JS** - an open-source React front-end development web framework that enables functionality such as server-side rendering and generating static websites for React based web applications.
@@ -22,7 +14,6 @@ Run `npm run build` to build the project. The build artifacts will be stored in 
 - **Incorporated BaseWeb** - Base is a design system comprised of modern, responsive, living components. Base Web is the React implementation of Base.
 - **Incorporated Formik** - Formik is the world's most popular open source form library for React and React Native.
 - **Storybook** - An open source tool for developing UI components in isolation for React.
-- **JSDoc** - Using comments containing JSDoc, programmers can add documentation describing the application programming interface of the code they're creating.
 - **Deployment** - Continous deployment over Vercel platform from the creators of Next.js. Vercel is a cloud platform for static sites, hybrid apps, and Serverless Functions.
 
 ## Development server

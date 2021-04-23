@@ -1,6 +1,13 @@
 import '@testing-library/jest-dom';
-import { render, screen } from '@testing-library/react';
+import renderer from 'react-test-renderer';
 import HomePage from '../pages/index';
+import {
+  ButtonInput,
+  InputField,
+  ImageLogo,
+  AppComponent,
+  Header,
+} from '@components';
 
 jest.mock('next/image', () => ({
   // eslint-disable-next-line @typescript-eslint/naming-convention
@@ -34,13 +41,65 @@ jest.mock('next-i18next', () => ({
   },
 }));
 
-describe('Pages', () => {
-  describe('Index', () => {
-    it('should render without throwing an error', function () {
-      render(<HomePage />);
-      expect(
-        screen.getByRole('heading', { name: 'Hello World' })
-      ).toBeInTheDocument();
-    });
+describe('With Snapshot Testing', () => {
+  it('App shows Hello World heading and form', () => {
+    const component = renderer.create(<HomePage />);
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+});
+
+describe('With Snapshot Testing', () => {
+  it('App shows Button', () => {
+    const component = renderer.create(
+      <ButtonInput onClick={() => {}} text='login' isDisabled={false} />
+    );
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+});
+
+describe('With Snapshot Testing', () => {
+  it('App shows Input Field', () => {
+    const component = renderer.create(
+      <InputField
+        name='email'
+        type='email'
+        label='Email'
+        onChange={() => {}}
+        onBlur={() => {}}
+        value=''
+      />
+    );
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+});
+
+describe('With Snapshot Testing', () => {
+  it('App shows Image', () => {
+    const component = renderer.create(<ImageLogo alt='' src='' />);
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+});
+
+describe('With Snapshot Testing', () => {
+  it('App shows App Component', () => {
+    const component = renderer.create(
+      <AppComponent title='Next JS' about_para='' readme='' />
+    );
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+});
+
+describe('With Snapshot Testing', () => {
+  it('App shows header', () => {
+    const component = renderer.create(
+      <Header text_btn1='Engish' text_btn2='Francis' />
+    );
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });

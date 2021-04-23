@@ -1,8 +1,8 @@
 {
-  "title": "Next js",
-  "text": "Bonjour le monde",
-  "change-locale": "changer de langue",
+  "title": "Next JS Boilerplate",
   "description": "ceci est une page Web basée sur le passe-partout js suivant",
-  "email-error": "Email invalide",
-  "password-error": "Mot de passe requis"
+  "readme": "Readme",
+  "btn-text1": "English",
+  "btn-text2":"Francis",
+  "about_para": "Plus d'informations sur la commande Next JS Boilerplate "
 }
