@@ -3,12 +3,7 @@ import styles from '../styles/home.module.css';
 import { GetStaticProps } from 'next';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import {
-  PageLayoutWithSEO,
-  AppComponent,
-  AboutComponent,
-  Header,
-} from '@components';
+import { PageLayoutWithSEO, AppComponent, Header } from '@components';
 
 /**
  * Some documented component
@@ -31,7 +26,7 @@ const HomePage: React.FunctionComponent<any> = () => {
         rel='stylesheet'
         integrity='sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6'
       />
-      <Header />
+      <Header text_btn1={t('btn-text1')} text_btn2={t('btn-text2')} />
       <div className={styles.container}>
         <PageLayoutWithSEO
           title={t('title')}
@@ -40,16 +35,13 @@ const HomePage: React.FunctionComponent<any> = () => {
           }}
         />
         <main className={styles.main}>
-          <AppComponent />
+          <AppComponent
+            title={t('title')}
+            about_para={t('about_para')}
+            readme={t('readme')}
+          />
         </main>
       </div>
-      <AboutComponent
-        heading={t('heading')}
-        about_para1={t('about_para1')}
-        about_para2={t('about_para2')}
-        storybook={t('storybook')}
-        readme={t('readme')}
-      />
     </>
   );
 };

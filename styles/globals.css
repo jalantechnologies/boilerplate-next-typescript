@@ -45,10 +45,10 @@ header {
   position: fixed;
   z-index: 999;
   background: #000;
-  filter: alpha(opacity=50);
-  -moz-opacity: 0.5;
-  -khtml-opacity: 0.5;
-  opacity: 0.5;
+  filter: alpha(opacity=40);
+  -moz-opacity: 0.4;
+  -khtml-opacity: 0.4;
+  opacity: 0.4;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;
@@ -69,7 +69,7 @@ p {
 
 .bg-class {
   position: absolute;
-  background: linear-gradient(180deg, #ad1deb 0%, #6e72fc 100%);
+  background: #fff;
   width: 100%;
   height: 100%;
   top: 0px;
@@ -183,20 +183,22 @@ p {
   float: left;
 }
 
-.heading {
-  font-size: 60px;
-  margin-left: 35%;
-  margin-top: 20%;
+.head {
+  margin-left: 20%;
+  margin-top: 14%;
   position: absolute;
-  color: white;
+}
+
+.heading {
+  text-align: center;
+  font-size: 60px;
+  color: #000;
   font-weight: 700;
   font-family: 'Roboto', sans-serif;
 }
 
 .sub-head {
   font-size: 24px;
-  margin-top: 50px;
-  position: relative;
   color: #090909;
   font-weight: 400;
   font-family: 'Roboto', sans-serif;

@@ -4,13 +4,14 @@ import IMG_CONFIG from './image-config';
 
 type ImageProps = {
   src: string;
+  alt: string;
 };
 
-const ImageLogo: React.FC<ImageProps> = ({ src }) => {
+const ImageLogo: React.FC<ImageProps> = ({ src, alt }) => {
   return (
     <Image
       src={src}
-      alt='logo'
+      alt={alt}
       width={IMG_CONFIG.width}
       height={IMG_CONFIG.height}
     />

@@ -1,21 +1,27 @@
 import * as React from 'react';
 import { ButtonInput } from '@components';
 import { useRouter } from 'next/router';
-const Header: React.FC = () => {
+
+type HeaderProps = {
+  text_btn1: string;
+  text_btn2: string;
+};
+
+const Header: React.FC<HeaderProps> = ({ text_btn1, text_btn2 }) => {
   const router = useRouter();
   return (
-    <header id='header'>
+    <header>
       <div className='btn-en'>
         <ButtonInput
-          disabled={true}
-          text='English'
+          isDisabled={false}
+          text={text_btn1}
           onClick={() => router.push('/en')}
         />
       </div>
       <div className='btn-fr'>
         <ButtonInput
-          disabled={true}
-          text='Francis'
+          isDisabled={false}
+          text={text_btn2}
           onClick={() => router.push('/fr')}
         />
       </div>

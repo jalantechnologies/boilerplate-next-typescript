@@ -6,8 +6,6 @@ import {
   InputField,
   ImageLogo,
   AppComponent,
-  HomeComponent,
-  AboutComponent,
   Header,
 } from '@components';
 
@@ -70,22 +68,6 @@ describe('With Snapshot Testing', () => {
 describe('With Snapshot Testing', () => {
   it('App shows Image', () => {
     const component = renderer.create(<ImageLogo />);
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-});
-
-describe('With Snapshot Testing', () => {
-  it('App shows Home Component with form', () => {
-    const component = renderer.create(<HomeComponent />);
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-});
-
-describe('With Snapshot Testing', () => {
-  it('App shows About Component with a button', () => {
-    const component = renderer.create(<AboutComponent />);
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
