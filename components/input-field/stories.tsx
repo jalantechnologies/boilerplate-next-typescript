@@ -5,48 +5,26 @@ import { Story } from '@storybook/react';
 type InputProps = {
   name: string;
   label: string;
+  type: string;
   onChange: () => void;
   onBlur: () => void;
   value: string;
 };
 
-const getCaptionForLocaleEmail = (locale) => {
-  switch (locale) {
-    case 'fr':
-      return 'E-mail';
-    default:
-      return 'Email';
-  }
-};
+const Template: Story<InputProps> = (args) => <InputField {...args} />;
 
-const getCaptionForLocalePassword = (locale) => {
-  switch (locale) {
-    case 'fr':
-      return 'le mot de passe';
-    default:
-      return 'Password';
-  }
-};
-
-const Template_Email: Story<InputProps> = (args, { globals: { locale } }) => (
-  <InputField {...{ ...args, label: getCaptionForLocaleEmail(locale) }} />
-);
-
-const Template_Password: Story<InputProps> = (
-  args,
-  { globals: { locale } }
-) => (
-  <InputField {...{ ...args, label: getCaptionForLocalePassword(locale) }} />
-);
-
-export const InputStoryEmail = Template_Email.bind({});
+export const InputStoryEmail = Template.bind({});
 InputStoryEmail.args = {
   name: 'email',
+  label: 'Email',
+  type: 'email',
 };
 
-export const InputStoryPassword = Template_Password.bind({});
+export const InputStoryPassword = Template.bind({});
 InputStoryPassword.args = {
   name: 'password',
+  label: 'Password',
+  type: 'password',
 };
 
 export default {

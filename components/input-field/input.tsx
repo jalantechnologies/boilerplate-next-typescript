@@ -6,6 +6,7 @@ import { styletron } from '../../styletron';
 interface InputProps {
   name: string;
   label: string;
+  type: string;
   onChange: () => void;
   onBlur: () => void;
   value: string;
@@ -17,6 +18,7 @@ const InputField: React.FC<InputProps> = ({
   onChange,
   onBlur,
   value,
+  type,
 }) => {
   return (
     <StyletronProvider value={styletron}>
@@ -29,6 +31,7 @@ const InputField: React.FC<InputProps> = ({
           onChange={onChange}
           onBlur={onBlur}
           value={value}
+          type={type}
         />
         <br />
       </div>

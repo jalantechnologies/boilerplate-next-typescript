@@ -5,14 +5,18 @@ import { styletron } from '../../styletron';
 
 type ButtonProps = {
   text: string;
-  disabled: boolean;
+  isDisabled: boolean;
   onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
 };
 
-const ButtonInput: React.FC<ButtonProps> = ({ text, disabled, onClick }) => {
+const ButtonInput: React.FC<ButtonProps> = ({ text, isDisabled, onClick }) => {
   return (
     <StyletronProvider value={styletron}>
-      <Button onClick={onClick} kind={KIND.secondary} shape={SHAPE.pill}>
+      <Button
+        onClick={onClick}
+        kind={KIND.secondary}
+        shape={SHAPE.pill}
+        disabled={isDisabled}>
         {text}
       </Button>
     </StyletronProvider>

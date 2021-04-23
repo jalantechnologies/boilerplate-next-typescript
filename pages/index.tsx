@@ -1,9 +1,14 @@
 import React from 'react';
-import styles from '../styles/Home.module.css';
+import styles from '../styles/home.module.css';
 import { GetStaticProps } from 'next';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { PageLayoutWithSEO, AppComponent, AboutComponent } from '@components';
+import {
+  PageLayoutWithSEO,
+  AppComponent,
+  AboutComponent,
+  Header,
+} from '@components';
 
 /**
  * Some documented component
@@ -13,6 +18,7 @@ import { PageLayoutWithSEO, AppComponent, AboutComponent } from '@components';
 
 const HomePage: React.FunctionComponent<any> = () => {
   const { t } = useTranslation('common');
+
   return (
     <>
       <link rel='preconnect' href='https://fonts.gstatic.com' />
@@ -25,6 +31,7 @@ const HomePage: React.FunctionComponent<any> = () => {
         rel='stylesheet'
         integrity='sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6'
       />
+      <Header />
       <div className={styles.container}>
         <PageLayoutWithSEO
           title={t('title')}

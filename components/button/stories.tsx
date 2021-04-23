@@ -4,45 +4,23 @@ import { Story } from '@storybook/react';
 
 type ButtonProps = {
   text: string;
-  disabled: boolean;
+  isDisabled: boolean;
   onClick: () => void;
 };
 
-const getCaptionForLocale = (locale) => {
-  switch (locale) {
-    case 'fr':
-      return 'connexion';
-    default:
-      return 'Log In';
-  }
-};
+const Template: Story<ButtonProps> = (args) => <ButtonInput {...args} />;
 
-const getCaptionForLocaleLogout = (locale) => {
-  switch (locale) {
-    case 'fr':
-      return 'Se déconnecter';
-    default:
-      return 'Log Out';
-  }
-};
-
-const Template_login: Story<ButtonProps> = (args, { globals: { locale } }) => (
-  <ButtonInput {...{ ...args, text: getCaptionForLocale(locale) }} />
-);
-
-const Template_logout: Story<ButtonProps> = (args, { globals: { locale } }) => (
-  <ButtonInput {...{ ...args, text: getCaptionForLocaleLogout(locale) }} />
-);
-
-export const LogInButton = Template_login.bind({});
+export const LogInButton = Template.bind({});
 LogInButton.args = {
-  disabled: false,
+  text: 'Log In',
+  isDisabled: false,
   onClick: () => {},
 };
 
-export const LogOutButton = Template_logout.bind({});
+export const LogOutButton = Template.bind({});
 LogOutButton.args = {
-  disabled: false,
+  isDisabled: false,
+  text: 'Log Out',
   onClick: () => {},
 };
 

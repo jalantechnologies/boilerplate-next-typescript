@@ -1,7 +1,15 @@
 import '@testing-library/jest-dom';
 import renderer from 'react-test-renderer';
 import HomePage from '../pages/index';
-import {ButtonInput, InputField, ImageLogo, AppComponent, HomeComponent, AboutComponent} from '@components'
+import {
+  ButtonInput,
+  InputField,
+  ImageLogo,
+  AppComponent,
+  HomeComponent,
+  AboutComponent,
+  Header,
+} from '@components';
 
 jest.mock('next/image', () => ({
   // eslint-disable-next-line @typescript-eslint/naming-convention
@@ -91,5 +99,10 @@ describe('With Snapshot Testing', () => {
   });
 });
 
-
-
+describe('With Snapshot Testing', () => {
+  it('App shows header', () => {
+    const component = renderer.create(<Header />);
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+});
