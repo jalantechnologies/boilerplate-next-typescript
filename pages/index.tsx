@@ -6,9 +6,8 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { PageLayoutWithSEO, AppComponent, Header } from '@components';
 
 /**
- * Some documented component
+ * @summary This is Home page of the web app where the working of this boilerplate is explained, it use localization to translate the content of the page.
  *
- * @component
  */
 
 const HomePage: React.FunctionComponent<any> = () => {
@@ -35,11 +34,7 @@ const HomePage: React.FunctionComponent<any> = () => {
           }}
         />
         <main className={styles.main}>
-          <AppComponent
-            title={t('title')}
-            about_para={t('about_para')}
-            readme={t('readme')}
-          />
+          <AppComponent />
         </main>
       </div>
     </>

@@ -1,24 +1,26 @@
 import React from 'react';
+import { useTranslation } from 'next-i18next';
+/**
+ * @component
+ * @summary This is an app component which is shows the landing page of this web app
+ * @example
+ * <AppComponent />
+ * */
 
-type AppProps = {
-  about_para: string;
-  readme: string;
-  title: string;
-};
-
-const AppComponent: React.FC<AppProps> = ({ about_para, readme, title }) => {
+const AppComponent: React.FC = () => {
+  const { t } = useTranslation('common');
   return (
     <React.Fragment>
       <div className='bg-class'>
         <div className='head'>
-          <p className='heading'>{title}</p>
+          <p className='heading'>{t('title')}</p>
           <p className='sub-head'>
-            {about_para}{' '}
+            {t('about_para')}{' '}
             <span>
               <a
                 style={{ color: '#7D7D7D' }}
                 href='https://github.com/jalantechnologies/boilerplate-next-typescript#readme'>
-                {readme}
+                {t('readme')}
               </a>
             </span>{' '}
           </p>

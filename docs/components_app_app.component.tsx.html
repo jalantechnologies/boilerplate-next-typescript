@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +7,7 @@
   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Home</title>
+  <title> components/app/app.component.tsx</title>
 
   <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -77,72 +79,62 @@
         <div class="core" id="main-content-wrapper">
             <div class="content">
                 <header class="page-title">
-                    <p></p>
-                    <h1>Home</h1>
+                    <p>Source</p>
+                    <h1>components/app/app.component.tsx</h1>
                 </header>
                 
 
 
 
     
-
-
-    <h3> </h3>
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
     <section>
-        <article><h1>Boilerplate Next + TypeScript</h1>
-<h2>Features</h2>
-<ul>
-<li><strong>Next JS</strong> - an open-source React front-end development web framework that enables functionality such as server-side rendering and generating static websites for React based web applications.</li>
-<li><strong>TypeScript</strong> - Superset of JavaScript which primarily provides optional static typing, classes and interfaces.</li>
-<li><strong>Imporve SEO</strong> - Using Next.js will improve your SEO result a lot.</li>
-<li><strong>Babel</strong> - The compiler for next generation JavaScript.</li>
-<li><strong>ESLint</strong> - ESLint statically analyzes your code to quickly find problems</li>
-<li><strong>Jest</strong> - Javascript testing framework , created by developers who created React.</li>
-<li><strong>React Testing Library</strong> - Simple and complete React DOM testing utilities that encourage good testing practices.</li>
-<li><strong>Sentry</strong> - Sentry is Open-source error tracking that helps developers to monitor, fix crashes in real time.</li>
-<li><strong>next-i18next</strong> - An internationalization-framework which helps you to add language translation support to your app.</li>
-<li><strong>Incorporated BaseWeb</strong> - Base is a design system comprised of modern, responsive, living components. Base Web is the React implementation of Base.</li>
-<li><strong>Incorporated Formik</strong> - Formik is the world's most popular open source form library for React and React Native.</li>
-<li><strong>Storybook</strong> - An open source tool for developing UI components in isolation for React.</li>
-<li><strong>JSDoc</strong> - Using comments containing JSDoc, programmers can add documentation describing the application programming interface of the code they're creating.</li>
-<li><strong>Deployment</strong> - Continous deployment over Vercel platform from the creators of Next.js. Vercel is a cloud platform for static sites, hybrid apps, and Serverless Functions.</li>
-</ul>
-<h2>Development server</h2>
-<p>Run <code>npm run dev</code> for a dev server. Navigate to http://localhost:8080/. The app will automatically reload if you change any of the source files.</p>
-<h2>Build</h2>
-<p>Run <code>npm run build</code> to build the project. The build artifacts will be stored in the dist/ directory.</p>
-<h2>Sentry</h2>
-<p>Setup sentry for the real time application monitoring. Setup the sentry by providing these entries manually inside the configuration.</p>
-<ul>
-<li><code>public.sentryDSN``String</code> - API key for <a href="https://docs.sentry.io/">Sentry</a></li>
-<li><code>public.sentryENV``String</code> - Environment for <a href="https://docs.sentry.io/">Sentry</a></li>
-</ul>
-<h2>Storybook</h2>
-<p>Added <a href="https://storybook.js.org/docs/react/get-started/introduction">Storybook</a> run <code>npm run storybook</code> to check component in isolation on <code>http://localhost:6006/</code>.</p>
-<h2>JSDoc</h2>
-<p>Run <code>npm run docs</code> to create documentation of your javascript code.</p>
-<h2>Linting</h2>
-<p>Added Linting using eslint Run <code>npm run lint</code> to run linting</p>
-<h2>Unit test</h2>
-<p>Added Unit testing using Jest, Enzyme Run <code>npm run test</code> to run test cases.</p></article>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React from 'react';
+import { useTranslation } from 'next-i18next';
+/**
+ * @component
+ * @summary This is an app component which is shows the landing page of this web app
+ * @example
+ * &lt;AppComponent />
+ * */
+
+const AppComponent: React.FC = () => {
+  const { t } = useTranslation('common');
+  return (
+    &lt;React.Fragment>
+      &lt;div className='bg-class'>
+        &lt;div className='head'>
+          &lt;p className='heading'>{t('title')}&lt;/p>
+          &lt;p className='sub-head'>
+            {t('about_para')}{' '}
+            &lt;span>
+              &lt;a
+                style={{ color: '#7D7D7D' }}
+                href='https://github.com/jalantechnologies/boilerplate-next-typescript#readme'>
+                {t('readme')}
+              &lt;/a>
+            &lt;/span>{' '}
+          &lt;/p>
+        &lt;/div>
+        &lt;div className='next-logo'>&lt;/div>
+        &lt;div className='base-logo'>&lt;/div>
+        &lt;div className='eslint-logo'>&lt;/div>
+        &lt;div className='storybook-logo'>&lt;/div>
+        &lt;div className='seo-logo'>&lt;/div>
+        &lt;div className='ts-logo'>&lt;/div>
+        &lt;div className='sentry-logo'>&lt;/div>
+        &lt;div className='i18n-logo'>&lt;/div>
+        &lt;div className='jest-logo'>&lt;/div>
+        &lt;div className='formik-logo'>&lt;/div>
+      &lt;/div>
+    &lt;/React.Fragment>
+  );
+};
+
+export default AppComponent;
+</code></pre>
+        </article>
     </section>
-
-
 
 
 
