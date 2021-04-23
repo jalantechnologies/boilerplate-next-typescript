@@ -14,7 +14,6 @@
 - **Incorporated BaseWeb** - Base is a design system comprised of modern, responsive, living components. Base Web is the React implementation of Base.
 - **Incorporated Formik** - Formik is the world's most popular open source form library for React and React Native.
 - **Storybook** - An open source tool for developing UI components in isolation for React.
-- **JSDoc** - Using comments containing JSDoc, programmers can add documentation describing the application programming interface of the code they're creating.
 - **Deployment** - Continous deployment over Vercel platform from the creators of Next.js. Vercel is a cloud platform for static sites, hybrid apps, and Serverless Functions.
 
 ## Development server

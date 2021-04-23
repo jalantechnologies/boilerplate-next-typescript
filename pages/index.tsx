@@ -5,11 +5,6 @@ import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { PageLayoutWithSEO, AppComponent, Header } from '@components';
 
-/**
- * @summary This is Home page of the web app where the working of this boilerplate is explained, it use localization to translate the content of the page.
- *
- */
-
 const HomePage: React.FunctionComponent<any> = () => {
   const { t } = useTranslation('common');
 

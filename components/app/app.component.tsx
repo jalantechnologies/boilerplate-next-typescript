@@ -1,11 +1,5 @@
 import React from 'react';
 import { useTranslation } from 'next-i18next';
-/**
- * @component
- * @summary This is an app component which is shows the landing page of this web app
- * @example
- * <AppComponent />
- * */
 
 const AppComponent: React.FC = () => {
   const { t } = useTranslation('common');
