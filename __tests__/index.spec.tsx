@@ -87,7 +87,7 @@ describe('With Snapshot Testing', () => {
 describe('With Snapshot Testing', () => {
   it('App shows App Component', () => {
     const component = renderer.create(
-      <AppComponent title='Next JS' about_para='' readme='' />
+      <AppComponent />
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
