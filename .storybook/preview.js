@@ -6,21 +6,6 @@ Object.defineProperty(nextImage, 'default', {
   value: (props) => <img {...props} />,
 });
 
-export const globalTypes = {
-  locale: {
-    name: 'Locale',
-    description: 'Internationalization locale',
-    defaultValue: 'en',
-    toolbar: {
-      icon: 'globe',
-      items: [
-        { value: 'en', title: 'English' },
-        { value: 'fr', title: 'Français' },
-      ],
-    },
-  },
-};
-
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   layout: 'padded',
