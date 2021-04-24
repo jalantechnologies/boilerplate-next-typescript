@@ -35,10 +35,6 @@ Setup sentry for the real time application monitoring. Setup the sentry by provi
 
 Added [Storybook](https://storybook.js.org/docs/react/get-started/introduction) run `npm run storybook` to check component in isolation on `http://localhost:6006/`.
 
-## JSDoc
-
-Run `npm run docs` to create documentation of your javascript code.
-
 ## Linting
 
 Added Linting using eslint Run `npm run lint` to run linting
