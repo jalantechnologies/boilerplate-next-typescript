@@ -5,7 +5,7 @@ const AppComponent: React.FC = () => {
   const { t } = useTranslation('common');
   return (
     <React.Fragment>
-      <div className='bg-class'>
+      
         <div className='head'>
           <p className='heading'>{t('title')}</p>
           <p className='sub-head'>
@@ -29,7 +29,7 @@ const AppComponent: React.FC = () => {
         <div className='i18n-logo'></div>
         <div className='jest-logo'></div>
         <div className='formik-logo'></div>
-      </div>
+      
     </React.Fragment>
   );
 };
