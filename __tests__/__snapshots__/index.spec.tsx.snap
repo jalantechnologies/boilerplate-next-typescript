@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`With Snapshot Testing App shows App Component 1`] = `
-<div
-  className="bg-class"
->
+Array [
   <div
     className="head"
   >
@@ -31,38 +29,38 @@ exports[`With Snapshot Testing App shows App Component 1`] = `
       </span>
        
     </p>
-  </div>
+  </div>,
   <div
     className="next-logo"
-  />
+  />,
   <div
     className="base-logo"
-  />
+  />,
   <div
     className="eslint-logo"
-  />
+  />,
   <div
     className="storybook-logo"
-  />
+  />,
   <div
     className="seo-logo"
-  />
+  />,
   <div
     className="ts-logo"
-  />
+  />,
   <div
     className="sentry-logo"
-  />
+  />,
   <div
     className="i18n-logo"
-  />
+  />,
   <div
     className="jest-logo"
-  />
+  />,
   <div
     className="formik-logo"
-  />
-</div>
+  />,
+]
 `;
 
 exports[`With Snapshot Testing App shows Button 1`] = `
@@ -126,67 +124,63 @@ Array [
   <div>
     <main>
       <div
-        className="bg-class"
+        className="head"
       >
-        <div
-          className="head"
+        <p
+          className="heading"
         >
-          <p
-            className="heading"
-          >
-            title
-          </p>
-          <p
-            className="sub-head"
-          >
-            about_para
-             
-            <span>
-              <a
-                href="https://github.com/jalantechnologies/boilerplate-next-typescript#readme"
-                style={
-                  Object {
-                    "color": "#7D7D7D",
-                  }
+          title
+        </p>
+        <p
+          className="sub-head"
+        >
+          about_para
+           
+          <span>
+            <a
+              href="https://github.com/jalantechnologies/boilerplate-next-typescript#readme"
+              style={
+                Object {
+                  "color": "#7D7D7D",
                 }
-              >
-                readme
-              </a>
-            </span>
-             
-          </p>
-        </div>
-        <div
-          className="next-logo"
-        />
-        <div
-          className="base-logo"
-        />
-        <div
-          className="eslint-logo"
-        />
-        <div
-          className="storybook-logo"
-        />
-        <div
-          className="seo-logo"
-        />
-        <div
-          className="ts-logo"
-        />
-        <div
-          className="sentry-logo"
-        />
-        <div
-          className="i18n-logo"
-        />
-        <div
-          className="jest-logo"
-        />
-        <div
-          className="formik-logo"
-        />
+              }
+            >
+              readme
+            </a>
+          </span>
+           
+        </p>
       </div>
+      <div
+        className="next-logo"
+      />
+      <div
+        className="base-logo"
+      />
+      <div
+        className="eslint-logo"
+      />
+      <div
+        className="storybook-logo"
+      />
+      <div
+        className="seo-logo"
+      />
+      <div
+        className="ts-logo"
+      />
+      <div
+        className="sentry-logo"
+      />
+      <div
+        className="i18n-logo"
+      />
+      <div
+        className="jest-logo"
+      />
+      <div
+        className="formik-logo"
+      />
     </main>
   </div>,
 ]
